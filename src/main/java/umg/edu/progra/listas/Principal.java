@@ -92,7 +92,7 @@ public class Principal {
         Nodo nodoDesdeFinal = lista.obtenerDesdeFinal(posicion);
         System.out.println("El elementode la posición"+ posicion + " desde el final: " + (nodoDesdeFinal != null ? nodoDesdeFinal.leerDato():"No existe"));
 
-        //aplicando el meto eliminar duplicados
+        //aplicando el metodo eliminar duplicados
         lista.insertarCabezaLista(4);
         lista.insertarCabezaLista(45);
         lista.insertarCabezaLista(10);
@@ -106,6 +106,9 @@ public class Principal {
         System.out.println("\nLista sin duplicados");
         lista.visualizar();
 
+        //aplicando el metodo tamaño de lista
+        System.out.println("\nEl tamaño de la lista es: " + lista.obtenerTamano());
+ 
     }
 
 }

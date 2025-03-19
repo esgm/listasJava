@@ -161,6 +161,7 @@ public class Lista {
         }
     }
 
+    /*** Crear los metodos que se solicitan ***/
 
     //1 - Método para invertir la lista enlazada
     public void invertirLista() {
@@ -207,14 +208,17 @@ public class Lista {
         }
     }
 
+    //* 4 - Método para obtener el tamaño de la lista enlazada
+    public int obtenerTamano(){
+        int count = 0;
+        Nodo actual = primero;
+        while (actual != null){
+            count++;
+            actual = actual.enlace;
+        } 
+        return count;
+    }
     
-    /**
-	* Crear los metodos que se solicitan
-
-    /**
-     * 4 - Método para obtener el tamaño de la lista enlazada
-     */
-    
-   
+    /*** finaliza metodos que se solicitados ***/
     
 }
