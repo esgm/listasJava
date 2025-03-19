@@ -43,14 +43,18 @@ public class Principal {
         
         lista.visualizar();
         
-
+        //* Ejercicio 1: Ordernar la lista de forma ascendente
+        lista.ordenarAscendente();
+        System.out.println("Lista ordenada");
+        lista.visualizar();
+        System.out.println("\n");
         /**
 		 * Resolver lo que se solicita a continuacion
          * Ejercicio 2: Unir dos listas enlazadas
          * Ejercicio 3: Separa numeros pares e impares en dos listas enlazadas diferentes
          */
         
-         //* Ejercicio 1: Ordernar la lista de forma ascendente
+         // de forma ascendente
         System.out.println("\nLista invertida");
         lista.invertirLista();
         System.out.println("\nResultado de la lista invertida:");

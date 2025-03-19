@@ -114,6 +114,26 @@ public class Lista {
         }
     }
 
+
+    //Ordenar ascendente
+    public void ordenarAscendente() {
+        if (primero == null || primero.enlace == null) return;
+        boolean swapped;
+        do {
+            swapped = false;
+            Nodo actual = primero;
+            while (actual.enlace != null) {
+                if (actual.dato > actual.enlace.dato) {
+                    int temp = actual.dato;
+                    actual.dato = actual.enlace.dato;
+                    actual.enlace.dato = temp;
+                    swapped = true;
+                }
+                actual = actual.enlace;
+            }
+        } while (swapped);
+    }
+
     //metodo para invertir lista
     public void invertirLista() {
         Nodo actual = primero, previo = null, siguiente;
