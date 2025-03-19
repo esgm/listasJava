@@ -134,6 +134,34 @@ public class Lista {
         } while (swapped);
     }
 
+
+    //Metodo para unir dos listas enlazadas
+    public void unirListas(Lista otra){
+        if (primero == null) {
+            primero = otra.primero;
+        }else {
+            Nodo actual = primero;
+            while (actual.enlace != null) {
+                actual = actual.enlace;
+            }
+            actual.enlace = otra.primero;
+        }
+    }
+
+    //Metodo separar pares e impares
+    public void separarParesImpares(Lista pares, Lista impares) {
+        Nodo actual = primero;
+        while (actual != null) {
+            if (actual.dato % 2 == 0) {
+                pares.insertarCabezaLista(actual.dato);
+            } else {
+                impares.insertarCabezaLista(actual.dato);
+            }
+            actual = actual.enlace;
+        }
+    }
+
+
     //metodo para invertir lista
     public void invertirLista() {
         Nodo actual = primero, previo = null, siguiente;
