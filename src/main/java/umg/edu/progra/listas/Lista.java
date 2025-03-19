@@ -191,14 +191,25 @@ public class Lista {
         return mainPtr;
     }
 
+    //* 3 - Método para eliminar duplicados en una lista enlazada
+	public void eliminarDuplicados(){
+        Nodo actual = primero;
+        while (actual != null && actual.enlace != null){
+            Nodo temp = actual;
+            while (temp.enlace != null){
+                if (actual.dato == temp.enlace.dato){
+                    temp.enlace = temp.enlace.enlace;
+                }else{
+                    temp = temp.enlace;
+                }
+            }
+            actual = actual.enlace;
+        }
+    }
 
-	/**
-	* Crear los metodos que se solicitan
-
+    
     /**
-     * 3 - Método para eliminar duplicados en una lista enlazada
-     */
-
+	* Crear los metodos que se solicitan
 
     /**
      * 4 - Método para obtener el tamaño de la lista enlazada

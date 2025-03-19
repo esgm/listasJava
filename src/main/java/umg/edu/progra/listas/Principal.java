@@ -91,6 +91,21 @@ public class Principal {
         int posicion = 12;
         Nodo nodoDesdeFinal = lista.obtenerDesdeFinal(posicion);
         System.out.println("El elementode la posición"+ posicion + " desde el final: " + (nodoDesdeFinal != null ? nodoDesdeFinal.leerDato():"No existe"));
+
+        //aplicando el meto eliminar duplicados
+        lista.insertarCabezaLista(4);
+        lista.insertarCabezaLista(45);
+        lista.insertarCabezaLista(10);
+        lista.insertarCabezaLista(2);
+
+        System.out.println("\nLista con duplicados");
+        //lista.ordenarAscendente(); //quitar comentario para apreciar los repetidos de manera mas clara
+        lista.visualizar();
+
+        lista.eliminarDuplicados();
+        System.out.println("\nLista sin duplicados");
+        lista.visualizar();
+
     }
 
 }
