@@ -76,16 +76,21 @@ public class Principal {
         System.out.println("\nLista de impares:");
         listaImpares.visualizar();
         System.out.println("\n");
-
         
         /*** Fin de los ejercicios ***/
+
         
-        
-        // de forma ascendente
+        //Aplicando el metodo 1 de forma ascendente
         System.out.println("\nLista invertida");
         lista.invertirLista();
         System.out.println("\nResultado de la lista invertida:");
         lista.visualizar();
+
+
+        //aplicando el metodo obtenerDesdeFinal
+        int posicion = 12;
+        Nodo nodoDesdeFinal = lista.obtenerDesdeFinal(posicion);
+        System.out.println("El elementode la posición"+ posicion + " desde el final: " + (nodoDesdeFinal != null ? nodoDesdeFinal.leerDato():"No existe"));
     }
 
 }

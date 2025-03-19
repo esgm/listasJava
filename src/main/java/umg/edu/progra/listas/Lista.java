@@ -162,7 +162,7 @@ public class Lista {
     }
 
 
-    //metodo para invertir lista
+    //1 - Método para invertir la lista enlazada
     public void invertirLista() {
         Nodo actual = primero, previo = null, siguiente;
         while (actual != null){
@@ -174,16 +174,26 @@ public class Lista {
         primero = previo;
     }
 
+    //* 2 - Método para obtener el elemento en la posición n desde el final
+    public Nodo obtenerDesdeFinal(int n){
+        Nodo mainPtr = primero;
+        Nodo refPtr = primero;
+        int count = 0;
+        while (count < n) {
+            if (refPtr == null) return null;
+            refPtr = refPtr.enlace;
+            count++;            
+        }
+        while (refPtr != null) {
+            mainPtr = mainPtr.enlace;
+            refPtr = refPtr.enlace;
+        }
+        return mainPtr;
+    }
+
 
 	/**
 	* Crear los metodos que se solicitan
-    /**
-     * 1 - Método para invertir la lista enlazada
-     */
-
-    /**
-     * 2 - Método para obtener el elemento en la posición n desde el final
-     */
 
     /**
      * 3 - Método para eliminar duplicados en una lista enlazada
